@@ -9,7 +9,7 @@
 
 ### **Objective**
 
-Generating simple cross-tab in Proc Freq to exam possible trend of weight loss (in lb) in response to daily walking steps.
+Generating simple cross-tab in `PROC FREQ` to exam possible trend of weight loss (in lb) in response to daily walking steps.
 
 ### **Data**
 
@@ -28,7 +28,7 @@ Generating simple cross-tab in Proc Freq to exam possible trend of weight loss (
 
 - Import Excel data file into SAS, create SAS data set named as **WL0**.
 - Data management:
-   1. Check Data using Proc Means and Proc Freq. Create a new data set **WL1** using a data step program including the following steps: step (i) and (ii).
+   1. Check Data using `PROC MEANS` and `PROC FREQ`. Create a new data set **WL1** using a data step program including the following steps: step (i) and (ii).
    2. Clean data: change value ‘9999’ to missing using Array statement.
    3. Create weight difference variables:
      ```
@@ -36,7 +36,7 @@ Generating simple cross-tab in Proc Freq to exam possible trend of weight loss (
       wd2 = weight0 - weight2;
       wd12 = weight1 - weight2;
      ```
-   4. Using Proc Means and Proc Freq, check weight difference variables (only pick **wd2** for this project, you may use others for practice) and **walk_steps** var for making groups from these var. Create a new data set **WL2** using a data step program including the following steps: step (v) and (vi).
+   4. Using `PROC MEANS` and `PROC FREQ`, check weight difference variables (only pick **wd2** for this project, you may use others for practice) and **walk_steps** var for making groups from these var. Create a new data set **WL2** using a data step program including the following steps: step (v) and (vi).
    5. Create groups for **walk_steps**: create new var **ws_group**.
       The new group var should have 3 categories:
         - “less than 5000”
@@ -48,7 +48,7 @@ Generating simple cross-tab in Proc Freq to exam possible trend of weight loss (
          - “losing <= 5 lb”
          - “losing > 5 lb”
 - Create permanent data set from data set **WL2**: **projectd.weight_loss**.
-- Create cross-tab using Proc Freq for walk steps' groups (**ws_group**) and weight loss groups (**wd_group**) to exam the possible trend.
+- Create cross-tab using `PROC FREQ` for walk steps' groups (**ws_group**) and weight loss groups (**wd_group**) to exam the possible trend.
 
 <br>
 
